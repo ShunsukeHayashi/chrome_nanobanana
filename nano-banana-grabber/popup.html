@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 320px; padding: 10px; font-family: sans-serif; }
+    img { max-width: 100%; border: 1px solid #ddd; margin-bottom: 10px; display: none;}
+    textarea { width: 100%; height: 60px; margin-bottom: 10px; }
+    button { width: 100%; padding: 8px; cursor: pointer; background: #FFD700; border: none; font-weight: bold; margin-bottom: 5px; }
+    button:hover { background: #E6C200; }
+    #apiKey { width: 100%; margin-bottom: 10px; }
+    .secondary { background: #eee; }
+  </style>
+</head>
+<body>
+  <h3>Nano Banana Snapper</h3>
+
+  <input type="password" id="apiKey" placeholder="Google GenAI API Keyを入力">
+
+  <button id="btnSelect" class="secondary">📸 エリアを選択してキャプチャ</button>
+
+  <div id="previewArea">
+    <p>参照画像:</p>
+    <img id="capturedImg">
+  </div>
+
+  <textarea id="prompt" placeholder="生成したい画像の説明（例：この構図でサイバーパンク風に）"></textarea>
+
+  <button id="btnGenerate">🍌 生成開始 (Nano Banana Pro)</button>
+
+  <div id="resultArea">
+    <img id="resultImg">
+    <p id="status"></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
